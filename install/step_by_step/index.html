@@ -1,0 +1,2076 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="JumpServer Docs">
+      
+      
+        <link rel="canonical" href="https://jumpserver.org/install/step_by_step/">
+      
+      
+        <meta name="author" content="wojiushixiaobai">
+      
+      <link rel="shortcut icon" href="../../img/facio.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+    
+    
+      
+        <title>安装文档 - JumpServer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a2408e81.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-147297392-6","docs.jumpserver.org"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://jumpserver.org" title="JumpServer Docs" class="md-header-nav__button md-logo" aria-label="JumpServer Docs">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            JumpServer Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              安装文档
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/jumpserver/jumpserver" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github Star
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://jumpserver.org" title="JumpServer Docs" class="md-nav__button md-logo" aria-label="JumpServer Docs">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    JumpServer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/jumpserver/jumpserver" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github Star
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="总体介绍" class="md-nav__link">
+      总体介绍
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      安装配置
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="安装配置" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        安装配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        安装文档
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="安装文档" class="md-nav__link md-nav__link--active">
+      安装文档
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    安装步骤
+  </a>
+  
+    <nav class="md-nav" aria-label="安装步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-python36-mysql-redis" class="md-nav__link">
+    1. 安装 python3.6 mysql Redis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-py3" class="md-nav__link">
+    2. 创建 py3 虚拟环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-py3" class="md-nav__link">
+    3. 载入 py3 虚拟环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-jumpserver" class="md-nav__link">
+    4. 获取 jumpserver 代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 安装编译环境依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 修改配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-jumpserver" class="md-nav__link">
+    7. 启动 jumpserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-koko" class="md-nav__link">
+    8. 正常部署 koko 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#81-docker-koko" class="md-nav__link">
+    8.1. docker 部署 koko 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-guacamole" class="md-nav__link">
+    9. 正常安装并启动 guacamole 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#91-docker-guacamole" class="md-nav__link">
+    9.1 docker 部署 guacamole 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-luna" class="md-nav__link">
+    10. 下载 luna 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-nginx" class="md-nav__link">
+    11. 配置 nginx 整合各组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-jumpserver" class="md-nav__link">
+    12. 开始使用 JumpServer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup_by_fast/" title="极速部署" class="md-nav__link">
+      极速部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker_install/" title="容器部署" class="md-nav__link">
+      容器部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      分布式部署
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="分布式部署" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        分布式部署
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup_by_prod/" title="环境说明" class="md-nav__link">
+      环境说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prod/distributed_01/" title="NFS 部署" class="md-nav__link">
+      NFS 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prod/distributed_02/" title="Tengine 部署" class="md-nav__link">
+      Tengine 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prod/distributed_03/" title="Mariadb 部署" class="md-nav__link">
+      Mariadb 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prod/distributed_04/" title="Redis 部署" class="md-nav__link">
+      Redis 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prod/distributed_05/" title="Core 部署" class="md-nav__link">
+      Core 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prod/distributed_06/" title="Koko 部署" class="md-nav__link">
+      Koko 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prod/distributed_07/" title="Guacamole 部署" class="md-nav__link">
+      Guacamole 部署
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible_install/" title="Ansible 部署" class="md-nav__link">
+      Ansible 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install_security/" title="安全建议" class="md-nav__link">
+      安全建议
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uninstall/" title="卸载文档" class="md-nav__link">
+      卸载文档
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      管理文档
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="管理文档" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        管理文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/quick_start/" title="快速入门" class="md-nav__link">
+      快速入门
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      更新升级
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="更新升级" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        更新升级
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/upgrade/1.0.0-1.4.3/" title="1.0.0-1.4.3 升级到 1.4.4" class="md-nav__link">
+      1.0.0-1.4.3 升级到 1.4.4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/upgrade/1.4.4/" title="1.4.4 升级到 1.4.5" class="md-nav__link">
+      1.4.4 升级到 1.4.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/upgrade/1.4.5-1.4.10/" title="1.4.5-1.4.10 升级到 最新" class="md-nav__link">
+      1.4.5-1.4.10 升级到 最新
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/upgrade/1.5.0/" title="1.5.0 及之后版本升级到 最新" class="md-nav__link">
+      1.5.0 及之后版本升级到 最新
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/upgrade/other/" title="其他部署方式升级说明" class="md-nav__link">
+      其他部署方式升级说明
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/migration/" title="迁移文档" class="md-nav__link">
+      迁移文档
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      资产要求
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="资产要求" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        资产要求
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/assets/telnet/" title="Tetnet" class="md-nav__link">
+      Tetnet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/assets/linux_ssh/" title="Linux SSH" class="md-nav__link">
+      Linux SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/assets/linux_vnc/" title="Linux VNC" class="md-nav__link">
+      Linux VNC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/assets/windows_ssh/" title="Windows SSH" class="md-nav__link">
+      Windows SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/assets/windows_vnc/" title="Windows VNC" class="md-nav__link">
+      Windows VNC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/assets/windows_rdp/" title="Windows RDP" class="md-nav__link">
+      Windows RDP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      身份认证
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="身份认证" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        身份认证
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/authentication/cas/" title="CAS 认证" class="md-nav__link">
+      CAS 认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/authentication/mfa/" title="MFA 认证" class="md-nav__link">
+      MFA 认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/authentication/ldap/" title="LDAP 认证" class="md-nav__link">
+      LDAP 认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/authentication/openid/" title="OpenID 认证" class="md-nav__link">
+      OpenID 认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/authentication/radius/" title="Radius 认证" class="md-nav__link">
+      Radius 认证
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/organization/" title="组织管理" class="md-nav__link">
+      组织管理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin-guide/proxy/" title="反向代理" class="md-nav__link">
+      反向代理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      开发文档
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="开发文档" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        开发文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/rest_api/" title="API文档" class="md-nav__link">
+      API文档
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../issues/list/" title="问题清单" class="md-nav__link">
+      问题清单
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      用户文档
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="用户文档" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        用户文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/assets/user-asset/" title="我的资产" class="md-nav__link">
+      我的资产
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      我的应用
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="我的应用" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        我的应用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/applications/user-database-app/" title="数据库应用" class="md-nav__link">
+      数据库应用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/ops/command-executions/create/" title="命令执行" class="md-nav__link">
+      命令执行
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/users/profile/" title="个人信息" class="md-nav__link">
+      个人信息
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/terminal/web-terminal/" title="Web终端" class="md-nav__link">
+      Web终端
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/terminal/web-sftp/" title="文件管理" class="md-nav__link">
+      文件管理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      帮助文档
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="帮助文档" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        帮助文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/core/" title="Core 常见问题" class="md-nav__link">
+      Core 常见问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/luna/" title="Luna 常见问题" class="md-nav__link">
+      Luna 常见问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/koko/" title="koko 常见问题" class="md-nav__link">
+      koko 常见问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/guacamole/" title="Guacamole 问题" class="md-nav__link">
+      Guacamole 问题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      关于
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="关于" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        关于
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/contributor/" title="贡献列表" class="md-nav__link">
+      贡献列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/change_log/" title="更新说明" class="md-nav__link">
+      更新说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/contact/" title="联系方式" class="md-nav__link">
+      联系方式
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    安装步骤
+  </a>
+  
+    <nav class="md-nav" aria-label="安装步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-python36-mysql-redis" class="md-nav__link">
+    1. 安装 python3.6 mysql Redis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-py3" class="md-nav__link">
+    2. 创建 py3 虚拟环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-py3" class="md-nav__link">
+    3. 载入 py3 虚拟环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-jumpserver" class="md-nav__link">
+    4. 获取 jumpserver 代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 安装编译环境依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 修改配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-jumpserver" class="md-nav__link">
+    7. 启动 jumpserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-koko" class="md-nav__link">
+    8. 正常部署 koko 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#81-docker-koko" class="md-nav__link">
+    8.1. docker 部署 koko 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-guacamole" class="md-nav__link">
+    9. 正常安装并启动 guacamole 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#91-docker-guacamole" class="md-nav__link">
+    9.1 docker 部署 guacamole 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-luna" class="md-nav__link">
+    10. 下载 luna 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-nginx" class="md-nav__link">
+    11. 配置 nginx 整合各组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-jumpserver" class="md-nav__link">
+    12. 开始使用 JumpServer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="_1">安装文档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">提示</p>
+<p>推荐使用 <a href="../setup_by_fast/">极速安装</a> 快速部署，资产规模较大参考 <a href="../setup_by_prod/">分布式部署</a> 进行部署<br />
+本文档需要非常强的动手能力, 部署过程中你会面临各种各样的问题  </p>
+<p>注意: 使用本文档你将无法获得额外的技术支持，包括后续的升级均需要自行处理，我们只推荐真正有需要的运维工程师进行使用</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">本文档是针对所有 <code>Linux</code> 发行版 <code>x86_64</code> 的安装说明, 非特定系统说明文档, 但是示例中我们仅展示 <code>Ubuntu</code> 和<code>Centos</code> 部分(注释部分)</p>
+</div>
+<ul>
+<li>遇到问题可以参考 <a href="https://www.bilibili.com/video/BV1VV411C797">安装视频</a></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">JumpServer 环境要求:</p>
+<p>硬件配置: 2个CPU核心, 4G 内存, 50G 硬盘（最低）<br />
+操作系统: Linux 发行版 x86_64  </p>
+<p>Python = 3.6.x<br />
+Mysql Server ≥ 5.6<br />
+Mariadb Server ≥ 5.5.56<br />
+Redis</p>
+</div>
+<h2 id="_2">安装步骤<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="1-python36-mysql-redis">1. 安装 python3.6 mysql Redis<a class="headerlink" href="#1-python36-mysql-redis" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">推荐直接从仓库获取</span>
+
+<span class="err">数据库字符集要求</span><span class="p">:</span>
+<span class="o">```</span><span class="n">mysql</span>
+<span class="k">create</span> <span class="k">database</span> <span class="n">jumpserver</span> <span class="k">default</span> <span class="n">charset</span> <span class="s1">&#39;utf8&#39;</span> <span class="k">collate</span> <span class="s1">&#39;utf8_bin&#39;</span><span class="p">;</span>
+<span class="o">```</span>
+</code></pre></div>
+
+
+<h3 id="2-py3">2. 创建 py3 虚拟环境<a class="headerlink" href="#2-py3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>python3.6 -m venv /opt/py3
+</code></pre></div>
+
+<h3 id="3-py3">3. 载入 py3 虚拟环境<a class="headerlink" href="#3-py3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> /opt/py3/bin/activate
+</code></pre></div>
+
+<div class="admonition tip">
+<p class="admonition-title">每次操作 jumpserver 都需要先载入 py3 虚拟环境</p>
+<details class="warning"><summary>部分系统可能会提示 source: not found, 可以使用 . 代替 source</summary><p><div class="highlight"><pre><span></span><code>. /opt/py3/bin/activate  
+</code></pre></div>
+可以在 ~/.bashrc 末尾加入 source /opt/py3/bin/activate 自动载入环境</p>
+</details>
+</div>
+<h3 id="4-jumpserver">4. 获取 jumpserver 代码<a class="headerlink" href="#4-jumpserver" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt <span class="o">&amp;&amp;</span> <span class="se">\</span>
+git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/jumpserver/jumpserver.git
+</code></pre></div>
+
+<details class="question"><summary>如果没有安装 git 请先安装, 网络有问题可以从 <a href="https://demo.jumpserver.org/download/jumpserver/">此处</a> 下载</summary><div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt
+wget http://demo.jumpserver.org/download/jumpserver/latest/jumpserver.tar.gz
+tar xf jumpserver.tar.gz
+</code></pre></div>
+
+</details>
+<h3 id="5">5. 安装编译环境依赖<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt/jumpserver/requirements
+</code></pre></div>
+
+<details class="tip"><summary>根据当前系统, 选择对应的文件执行即可</summary><p>Centos:
+<div class="highlight"><pre><span></span><code>yum install -y <span class="k">$(</span>cat rpm_requirements.txt<span class="k">)</span>
+</code></pre></div>
+Ubuntu:
+<div class="highlight"><pre><span></span><code>apt-get install -y <span class="k">$(</span>cat deb_requirements.txt<span class="k">)</span>
+</code></pre></div></p>
+</details>
+<div class="highlight"><pre><span></span><code>pip install wheel <span class="o">&amp;&amp;</span> <span class="se">\</span>
+pip install --upgrade pip setuptools <span class="o">&amp;&amp;</span> <span class="se">\</span>
+pip install -r requirements.txt
+</code></pre></div>
+
+<details class="question"><summary>确保已经载入 py3 虚拟环境, 中间如果遇到报错一般是依赖包没装全, 可以通过 搜索引擎 解决</summary><p>国内可以使用镜像加速<br />
+<div class="highlight"><pre><span></span><code>pip install wheel -i https://mirrors.aliyun.com/pypi/simple/
+pip install --upgrade pip setuptools -i https://mirrors.aliyun.com/pypi/simple/
+pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+</code></pre></div></p>
+</details>
+<h3 id="6">6. 修改配置文件<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt/jumpserver <span class="o">&amp;&amp;</span> <span class="se">\</span>
+cp config_example.yml config.yml <span class="o">&amp;&amp;</span> <span class="se">\</span>
+vi config.yml
+</code></pre></div>
+
+<details class="info"><summary>注意不能使用纯数字字符串, 可以参考此模版</summary><div class="highlight"><pre><span></span><code><span class="c1"># SECURITY WARNING: keep the secret key used in production secret!</span>
+<span class="c1"># 加密秘钥 生产环境中请修改为随机字符串，请勿外泄, 可使用命令生成</span>
+<span class="c1"># cat /dev/urandom | tr -dc A-Za-z0-9 | head -c 49;echo</span>
+<span class="nt">SECRET_KEY</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">W5Ic3fMXNZ0p5RIy5DhJYJllppTfcfkW8Yuf94VBMfpcssbfu</span>
+
+<span class="c1"># SECURITY WARNING: keep the bootstrap token used in production secret!</span>
+<span class="c1"># 预共享Token coco和guacamole用来注册服务账号，不在使用原来的注册接受机制</span>
+<span class="nt">BOOTSTRAP_TOKEN</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">zxffNymGjP79j6BN</span>
+
+<span class="c1"># Development env open this, when error occur display the full process track, Production disable it</span>
+<span class="c1"># DEBUG 模式 开启DEBUG后遇到错误时可以看到更多日志</span>
+<span class="nt">DEBUG</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="c1"># DEBUG, INFO, WARNING, ERROR, CRITICAL can set. See https://docs.djangoproject.com/en/1.10/topics/logging/</span>
+<span class="c1"># 日志级别</span>
+<span class="nt">LOG_LEVEL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ERROR</span>
+<span class="c1"># LOG_DIR:</span>
+
+<span class="c1"># Session expiration setting, Default 24 hour, Also set expired on on browser close</span>
+<span class="c1"># 浏览器Session过期时间，默认24小时, 也可以设置浏览器关闭则过期</span>
+<span class="c1"># SESSION_COOKIE_AGE: 86400</span>
+<span class="nt">SESSION_EXPIRE_AT_BROWSER_CLOSE</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="c1"># Database setting, Support sqlite3, mysql, postgres ....</span>
+<span class="c1"># 数据库设置</span>
+<span class="c1"># See https://docs.djangoproject.com/en/1.10/ref/settings/#databases</span>
+
+<span class="c1"># SQLite setting:</span>
+<span class="c1"># 使用单文件sqlite数据库</span>
+<span class="c1"># DB_ENGINE: sqlite3</span>
+<span class="c1"># DB_NAME:</span>
+
+<span class="c1"># MySQL or postgres setting like:</span>
+<span class="c1"># 使用Mysql作为数据库</span>
+<span class="nt">DB_ENGINE</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysql</span>
+<span class="nt">DB_HOST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="nt">DB_PORT</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3306</span>
+<span class="nt">DB_USER</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jumpserver</span>
+<span class="nt">DB_PASSWORD</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rBi41SrDqlX4zsx9e1L0cqTP</span>
+<span class="nt">DB_NAME</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jumpserver</span>
+
+<span class="c1"># When Django start it will bind this host and port</span>
+<span class="c1"># ./manage.py runserver 127.0.0.1:8080</span>
+<span class="c1"># 运行时绑定端口</span>
+<span class="nt">HTTP_BIND_HOST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.0.0.0</span>
+<span class="nt">HTTP_LISTEN_PORT</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="nt">WS_LISTEN_PORT</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8070</span>
+
+<span class="c1"># Use Redis as broker for celery and web socket</span>
+<span class="c1"># Redis配置</span>
+<span class="nt">REDIS_HOST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="nt">REDIS_PORT</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6379</span>
+<span class="nt">REDIS_PASSWORD</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ZhYnLrodpmPncovxJTnRyiBs</span>
+<span class="c1"># REDIS_DB_CELERY: 3</span>
+<span class="c1"># REDIS_DB_CACHE: 4</span>
+
+<span class="c1"># Use OpenID authorization</span>
+<span class="c1"># 使用OpenID 来进行认证设置</span>
+<span class="c1"># BASE_SITE_URL: http://localhost:8080</span>
+<span class="c1"># AUTH_OPENID: false  # True or False</span>
+<span class="c1"># AUTH_OPENID_SERVER_URL: https://openid-auth-server.com/</span>
+<span class="c1"># AUTH_OPENID_REALM_NAME: realm-name</span>
+<span class="c1"># AUTH_OPENID_CLIENT_ID: client-id</span>
+<span class="c1"># AUTH_OPENID_CLIENT_SECRET: client-secret</span>
+<span class="c1"># AUTH_OPENID_IGNORE_SSL_VERIFICATION: True</span>
+<span class="c1"># AUTH_OPENID_SHARE_SESSION: True</span>
+
+<span class="c1"># Use Radius authorization</span>
+<span class="c1"># 使用Radius来认证</span>
+<span class="c1"># AUTH_RADIUS: false</span>
+<span class="c1"># RADIUS_SERVER: localhost</span>
+<span class="c1"># RADIUS_PORT: 1812</span>
+<span class="c1"># RADIUS_SECRET:</span>
+
+<span class="c1"># CAS 配置</span>
+<span class="c1"># AUTH_CAS&#39;: False,</span>
+<span class="c1"># CAS_SERVER_URL&#39;: &quot;http://host/cas/&quot;,</span>
+<span class="c1"># CAS_ROOT_PROXIED_AS&#39;: &#39;http://jumpserver-host:port&#39;,  </span>
+<span class="c1"># CAS_LOGOUT_COMPLETELY&#39;: True,</span>
+<span class="c1"># CAS_VERSION&#39;: 3,</span>
+
+<span class="c1"># LDAP/AD settings</span>
+<span class="c1"># LDAP 搜索分页数量</span>
+<span class="c1"># AUTH_LDAP_SEARCH_PAGED_SIZE: 1000</span>
+<span class="c1">#</span>
+<span class="c1"># 定时同步用户</span>
+<span class="c1"># 启用 / 禁用</span>
+<span class="c1"># AUTH_LDAP_SYNC_IS_PERIODIC: True</span>
+<span class="c1"># 同步间隔 (单位: 时) (优先）</span>
+<span class="c1"># AUTH_LDAP_SYNC_INTERVAL: 12</span>
+<span class="c1"># Crontab 表达式</span>
+<span class="c1"># AUTH_LDAP_SYNC_CRONTAB: * 6 * * *</span>
+<span class="c1">#</span>
+<span class="c1"># LDAP 用户登录时仅允许在用户列表中的用户执行 LDAP Server 认证</span>
+<span class="c1"># AUTH_LDAP_USER_LOGIN_ONLY_IN_USERS: False</span>
+<span class="c1">#</span>
+<span class="c1"># LDAP 认证时如果日志中出现以下信息将参数设置为 0 (详情参见：https://www.python-ldap.org/en/latest/faq.html)</span>
+<span class="c1"># In order to perform this operation a successful bind must be completed on the connection</span>
+<span class="c1"># AUTH_LDAP_OPTIONS_OPT_REFERRALS: -1</span>
+
+<span class="c1"># OTP settings</span>
+<span class="c1"># OTP/MFA 配置</span>
+<span class="c1"># OTP_VALID_WINDOW: 0</span>
+<span class="c1"># OTP_ISSUER_NAME: Jumpserver</span>
+
+<span class="c1"># Perm show single asset to ungrouped node</span>
+<span class="c1"># 是否把未授权节点资产放入到 未分组 节点中</span>
+<span class="c1"># PERM_SINGLE_ASSET_TO_UNGROUP_NODE: false</span>
+<span class="c1">#</span>
+<span class="c1"># 启用定时任务</span>
+<span class="c1"># PERIOD_TASK_ENABLE: True</span>
+<span class="c1">#</span>
+<span class="c1"># 启用二次复合认证配置</span>
+<span class="c1"># LOGIN_CONFIRM_ENABLE: False</span>
+<span class="c1">#</span>
+<span class="c1"># Windows 登录跳过手动输入密码</span>
+<span class="nt">WINDOWS_SKIP_ALL_MANUAL_PASSWORD</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+</code></pre></div>
+
+</details>
+<h3 id="7-jumpserver">7. 启动 jumpserver<a class="headerlink" href="#7-jumpserver" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt/jumpserver
+./jms start
+</code></pre></div>
+
+<details class="warning"><summary>确保已经载入 py3 虚拟环境</summary><div class="highlight"><pre><span></span><code><span class="nb">source</span> /opt/py3/bin/activate
+</code></pre></div>
+
+</details>
+<details class="tip"><summary>可以 -d 参数在后台运行</summary><div class="highlight"><pre><span></span><code>./jms start -d
+</code></pre></div>
+
+</details>
+<h3 id="8-koko">8. 正常部署 koko 组件<a class="headerlink" href="#8-koko" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt
+</code></pre></div>
+
+<div class="admonition tip">
+<p class="admonition-title">访问 <a href="https://github.com/jumpserver/koko/releases">此处</a> 下载对应 release 包并解压到 /opt目录</p>
+<details class="question"><summary>如果网络存在问题可以点击 <a href="https://demo.jumpserver.org/download/koko/">此处</a> 下载</summary><div class="highlight"><pre><span></span><code>wget https://demo.jumpserver.org/download/koko/1.5.9/koko-master-linux-amd64.tar.gz
+</code></pre></div>
+
+</details>
+<div class="highlight"><pre><span></span><code>wget https://github.com/jumpserver/koko/releases/download/1.5.9/koko-master-linux-amd64.tar.gz
+</code></pre></div>
+
+</div>
+<div class="highlight"><pre><span></span><code>tar -xf koko-master-linux-amd64.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\</span>
+chown -R root:root kokodir <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">cd</span> kokodir
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>cp config_example.yml config.yml <span class="o">&amp;&amp;</span> <span class="se">\</span>
+vi config.yml
+</code></pre></div>
+
+<details class="info"><summary>BOOTSTRAP_TOKEN 需要从 jumpserver/config.yml 里面获取, 保证一致</summary><p>以下配置仅供参考
+<div class="highlight"><pre><span></span><code><span class="c1"># 项目名称, 会用来向Jumpserver注册, 识别而已, 不能重复</span>
+<span class="c1"># NAME: {{ Hostname }}</span>
+
+<span class="c1"># Jumpserver项目的url, api请求注册会使用</span>
+<span class="nt">CORE_HOST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://127.0.0.1:8080</span>
+
+<span class="c1"># Bootstrap Token, 预共享秘钥, 用来注册coco使用的service account和terminal</span>
+<span class="c1"># 请和jumpserver 配置文件中保持一致，注册完成后可以删除</span>
+<span class="nt">BOOTSTRAP_TOKEN</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">zxffNymGjP79j6BN</span>
+
+<span class="c1"># 启动时绑定的ip, 默认 0.0.0.0</span>
+<span class="c1"># BIND_HOST: 0.0.0.0</span>
+
+<span class="c1"># 监听的SSH端口号, 默认2222</span>
+<span class="c1"># SSHD_PORT: 2222</span>
+
+<span class="c1"># 监听的HTTP/WS端口号，默认5000</span>
+<span class="c1"># HTTPD_PORT: 5000</span>
+
+<span class="c1"># 项目使用的ACCESS KEY, 默认会注册,并保存到 ACCESS_KEY_STORE中,</span>
+<span class="c1"># 如果有需求, 可以写到配置文件中, 格式 access_key_id:access_key_secret</span>
+<span class="c1"># ACCESS_KEY: null</span>
+
+<span class="c1"># ACCESS KEY 保存的地址, 默认注册后会保存到该文件中</span>
+<span class="c1"># ACCESS_KEY_FILE: data/keys/.access_key</span>
+
+<span class="c1"># 设置日志级别 [DEBUG, INFO, WARN, ERROR, FATAL, CRITICAL]</span>
+<span class="nt">LOG_LEVEL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ERROR</span>
+
+<span class="c1"># SSH连接超时时间 (default 15 seconds)</span>
+<span class="c1"># SSH_TIMEOUT: 15</span>
+
+<span class="c1"># 语言 [en,zh]</span>
+<span class="c1"># LANG: zh</span>
+
+<span class="c1"># SFTP的根目录, 可选 /tmp, Home其他自定义目录</span>
+<span class="c1"># SFTP_ROOT: /tmp</span>
+
+<span class="c1"># SFTP是否显示隐藏文件</span>
+<span class="c1"># SFTP_SHOW_HIDDEN_FILE: false</span>
+
+<span class="c1"># 是否复用和用户后端资产已建立的连接(用户不会复用其他用户的连接)</span>
+<span class="c1"># REUSE_CONNECTION: true</span>
+
+<span class="c1"># 资产加载策略, 可根据资产规模自行调整. 默认异步加载资产, 异步搜索分页; 如果为all, 则资产全部加载, 本地搜索分页.</span>
+<span class="c1"># ASSET_LOAD_POLICY:</span>
+
+<span class="c1"># zip压缩的最大额度 (单位: M)</span>
+<span class="c1"># ZIP_MAX_SIZE: 1024M</span>
+
+<span class="c1"># zip压缩存放的临时目录 /tmp</span>
+<span class="c1"># ZIP_TMP_PATH: /tmp</span>
+
+<span class="c1"># 向 SSH Client 连接发送心跳的时间间隔 (单位: 秒)，默认为30, 0则表示不发送</span>
+<span class="c1"># CLIENT_ALIVE_INTERVAL: 30</span>
+
+<span class="c1"># 向资产发送心跳包的重试次数，默认为3</span>
+<span class="c1"># RETRY_ALIVE_COUNT_MAX: 3</span>
+
+<span class="c1"># 会话共享使用的类型 [local, redis], 默认local</span>
+<span class="nt">SHARE_ROOM_TYPE</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">redis</span>
+
+<span class="c1"># Redis配置</span>
+<span class="nt">REDIS_HOST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="nt">REDIS_PORT</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6379</span>
+<span class="nt">REDIS_PASSWORD</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ZhYnLrodpmPncovxJTnRyiBs</span>
+<span class="c1"># REDIS_CLUSTERS:</span>
+<span class="nt">REDIS_DB_ROOM</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
+</code></pre></div></p>
+</details>
+<div class="highlight"><pre><span></span><code>./koko  
+</code></pre></div>
+
+<details class="tip"><summary>可以 -d 参数在后台运行</summary><div class="highlight"><pre><span></span><code>./koko -d
+</code></pre></div>
+
+</details>
+<h3 id="81-docker-koko">8.1. docker 部署 koko 组件<a class="headerlink" href="#81-docker-koko" title="Permanent link">&para;</a></h3>
+<details class="info"><summary>如果前面已经正常部署了 koko, 可以跳过此步骤</summary><div class="highlight"><pre><span></span><code>docker run --name jms_koko -d <span class="se">\</span>
+  -p <span class="m">2222</span>:2222 -p <span class="m">127</span>.0.0.1:5000:5000 <span class="se">\</span>
+  -e <span class="nv">CORE_HOST</span><span class="o">=</span>http://&lt;Jumpserver_url&gt; <span class="se">\</span>
+  -e <span class="nv">BOOTSTRAP_TOKEN</span><span class="o">=</span>&lt;Jumpserver_BOOTSTRAP_TOKEN&gt; <span class="se">\</span>
+  -e <span class="nv">LOG_LEVEL</span><span class="o">=</span>ERROR <span class="se">\</span>
+  --restart<span class="o">=</span>always <span class="se">\</span>
+  jumpserver/jms_koko:&lt;Tag&gt;
+&lt;Jumpserver_url&gt; 为 jumpserver 的 url 地址, &lt;Jumpserver_BOOTSTRAP_TOKEN&gt; 需要从 jumpserver/config.yml 里面获取, 保证一致, &lt;Tag&gt; 是版本
+</code></pre></div>
+
+</details>
+<div class="admonition tip">
+<p class="admonition-title">例:</p>
+<div class="highlight"><pre><span></span><code>docker run --name jms_koko -d <span class="se">\</span>
+  -p <span class="m">2222</span>:2222 <span class="se">\</span>
+  -p <span class="m">127</span>.0.0.1:5000:5000 <span class="se">\</span>
+  -e <span class="nv">CORE_HOST</span><span class="o">=</span>http://192.168.244.144:8080 <span class="se">\</span>
+  -e <span class="nv">BOOTSTRAP_TOKEN</span><span class="o">=</span>zxffNymGjP79j6BN <span class="se">\</span>
+  -e <span class="nv">LOG_LEVEL</span><span class="o">=</span>ERROR <span class="se">\</span>
+  --restart<span class="o">=</span>always <span class="se">\</span>
+  jumpserver/jms_koko:1.5.9
+</code></pre></div>
+
+</div>
+<h3 id="9-guacamole">9. 正常安装并启动 guacamole 组件<a class="headerlink" href="#9-guacamole" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">建议使用 docker 部署 guacamole 组件 , 部分环境可能无法正常编译安装</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt <span class="o">&amp;&amp;</span> <span class="se">\</span>
+git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/jumpserver/docker-guacamole.git
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt/docker-guacamole <span class="o">&amp;&amp;</span> <span class="se">\</span>
+tar -xf guacamole-server-1.0.0.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\</span>
+tar -xf ssh-forward.tar.gz -C /bin/ <span class="o">&amp;&amp;</span> <span class="se">\</span>
+chmod +x /bin/ssh-forward
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt/docker-guacamole/guacamole-server-1.0.0
+</code></pre></div>
+
+<details class="warning"><summary>根据 <a href="http://guacamole.apache.org/doc/gug/installing-guacamole.html">guacamole官方文档</a> 文档安装对应的依赖包</summary><p>Ubuntu:<br />
+<div class="highlight"><pre><span></span><code>apt-get install -y libcairo2-dev libjpeg-turbo8-dev libpng12-dev libossp-uuid-dev <span class="o">&amp;&amp;</span> <span class="se">\</span>
+apt-get install -y libavcodec-dev libavutil-dev libswscale-dev libfreerdp-dev libpango1.0-dev libssh2-1-dev libtelnet-dev libvncserver-dev libpulse-dev libssl-dev libvorbis-dev libwebp-dev <span class="o">&amp;&amp;</span> <span class="se">\</span>
+ln -s /usr/local/lib/freerdp /usr/lib/x86_64-linux-gnu/freerdp
+</code></pre></div>
+Debian:<br />
+<div class="highlight"><pre><span></span><code>apt-get install -y libcairo2-dev libjpeg62-turbo-dev libpng12-dev libossp-uuid-dev <span class="o">&amp;&amp;</span> <span class="se">\</span>
+apt-get install -y libavcodec-dev libavutil-dev libswscale-dev libfreerdp-dev libpango1.0-dev libssh2-1-dev libtelnet-dev libvncserver-dev libpulse-dev libssl-dev libvorbis-dev libwebp-dev <span class="o">&amp;&amp;</span> <span class="se">\</span>
+ln -s /usr/local/lib/freerdp /usr/lib/x86_64-linux-gnu/freerdp
+</code></pre></div>
+Fedora/CentOS/RHEL:<br />
+<div class="highlight"><pre><span></span><code>yum -y localinstall --nogpgcheck https://mirrors.aliyun.com/rpmfusion/free/el/rpmfusion-free-release-7.noarch.rpm https://mirrors.aliyun.com/rpmfusion/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm <span class="o">&amp;&amp;</span> <span class="se">\</span>
+yum install -y cairo-devel libjpeg-turbo-devel libpng-devel uuid-devel <span class="o">&amp;&amp;</span> <span class="se">\</span>
+yum install -y ffmpeg-devel freerdp1.2-devel pango-devel libssh2-devel libtelnet-devel libvncserver-devel pulseaudio-libs-devel openssl-devel libvorbis-devel libwebp-devel <span class="o">&amp;&amp;</span> <span class="se">\</span>
+ln -s /usr/local/lib/freerdp /usr/lib64/freerdp
+</code></pre></div></p>
+</details>
+<div class="highlight"><pre><span></span><code>autoreconf -fi <span class="o">&amp;&amp;</span> <span class="se">\</span>
+./configure --with-init-dir<span class="o">=</span>/etc/init.d <span class="o">&amp;&amp;</span> <span class="se">\</span>
+make <span class="o">&amp;&amp;</span> <span class="se">\</span>
+make install
+</code></pre></div>
+
+<details class="warning"><summary>需要先在当前环境配置好 java</summary><p>Ubuntu:<br />
+<div class="highlight"><pre><span></span><code>apt-get -y install default-jre default-jdk
+</code></pre></div>
+Centos:<br />
+<div class="highlight"><pre><span></span><code>yum install -y java-1.8.0-openjdk
+</code></pre></div></p>
+</details>
+<div class="highlight"><pre><span></span><code>mkdir -p /config/guacamole /config/guacamole/extensions /config/guacamole/record /config/guacamole/drive <span class="o">&amp;&amp;</span> <span class="se">\</span>
+chown daemon:daemon /config/guacamole/record /config/guacamole/drive <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">cd</span> /config
+</code></pre></div>
+
+<details class="warning"><summary>访问 <a href="https://tomcat.apache.org/download-90.cgi">此处</a> 下载最新的 tomcat9</summary><div class="admonition question">
+<p class="admonition-title">网络有问题可以通过国内镜像源下载</p>
+</div>
+<div class="highlight"><pre><span></span><code>wget http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz
+</code></pre></div>
+
+</details>
+<div class="highlight"><pre><span></span><code>tar -xf apache-tomcat-9.0.35.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\</span>
+mv apache-tomcat-9.0.35 tomcat9 <span class="o">&amp;&amp;</span> <span class="se">\</span>
+rm -rf /config/tomcat9/webapps/* <span class="o">&amp;&amp;</span> <span class="se">\</span>
+sed -i <span class="s1">&#39;s/Connector port=&quot;8080&quot;/Connector port=&quot;8081&quot;/g&#39;</span> /config/tomcat9/conf/server.xml <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">&quot;java.util.logging.ConsoleHandler.encoding = UTF-8&quot;</span> &gt;&gt; /config/tomcat9/conf/logging.properties <span class="o">&amp;&amp;</span> <span class="se">\</span>
+ln -sf /opt/docker-guacamole/guacamole-1.0.0.war /config/tomcat9/webapps/ROOT.war <span class="o">&amp;&amp;</span> <span class="se">\</span>
+ln -sf /opt/docker-guacamole/guacamole-auth-jumpserver-1.0.0.jar /config/guacamole/extensions/guacamole-auth-jumpserver-1.0.0.jar <span class="o">&amp;&amp;</span> <span class="se">\</span>
+ln -sf /opt/docker-guacamole/root/app/guacamole/guacamole.properties /config/guacamole/guacamole.properties
+</code></pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">设置 guacamole 环境</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">JUMPSERVER_SERVER</span><span class="o">=</span>http://127.0.0.1:8080
+<span class="nb">echo</span> <span class="s2">&quot;export JUMPSERVER_SERVER=http://127.0.0.1:8080&quot;</span> &gt;&gt; ~/.bashrc
+<span class="nb">export</span> <span class="nv">BOOTSTRAP_TOKEN</span><span class="o">=</span>zxffNymGjP79j6BN
+<span class="nb">echo</span> <span class="s2">&quot;export BOOTSTRAP_TOKEN=zxffNymGjP79j6BN&quot;</span> &gt;&gt; ~/.bashrc
+<span class="nb">export</span> <span class="nv">JUMPSERVER_KEY_DIR</span><span class="o">=</span>/config/guacamole/keys
+<span class="nb">echo</span> <span class="s2">&quot;export JUMPSERVER_KEY_DIR=/config/guacamole/keys&quot;</span> &gt;&gt; ~/.bashrc
+<span class="nb">export</span> <span class="nv">GUACAMOLE_HOME</span><span class="o">=</span>/config/guacamole
+<span class="nb">echo</span> <span class="s2">&quot;export GUACAMOLE_HOME=/config/guacamole&quot;</span> &gt;&gt; ~/.bashrc
+<span class="nb">export</span> <span class="nv">GUACAMOLE_LOG_LEVEL</span><span class="o">=</span>ERROR
+<span class="nb">echo</span> <span class="s2">&quot;export GUACAMOLE_LOG_LEVEL=ERROR&quot;</span> &gt;&gt; ~/.bashrc
+<span class="nb">export</span> <span class="nv">JUMPSERVER_ENABLE_DRIVE</span><span class="o">=</span><span class="nb">true</span>
+<span class="nb">echo</span> <span class="s2">&quot;export JUMPSERVER_ENABLE_DRIVE=true&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre></div>
+
+<details class="info"><summary>环境变量说明</summary><p>JUMPSERVER_SERVER 指 core 访问地址<br />
+BOOTSTRAP_TOKEN 为 Jumpserver/config.yml 里面的 BOOTSTRAP_TOKEN 值<br />
+JUMPSERVER_KEY_DIR 认证成功后 key 存放目录<br />
+GUACAMOLE_HOME 为 guacamole.properties 配置文件所在目录<br />
+GUACAMOLE_LOG_LEVEL 为生成日志的等级<br />
+JUMPSERVER_ENABLE_DRIVE 为 rdp 协议挂载共享盘</p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">启动 guacamole</p>
+</div>
+<div class="highlight"><pre><span></span><code>/etc/init.d/guacd start
+sh /config/tomcat9/bin/startup.sh
+</code></pre></div>
+
+<h3 id="91-docker-guacamole">9.1 docker 部署 guacamole 组件<a class="headerlink" href="#91-docker-guacamole" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">如果前面已经正常部署了 guacamole, 可以跳过此步骤</p>
+<div class="highlight"><pre><span></span><code>docker run --name jms_guacamole -d <span class="se">\</span>
+  -p <span class="m">127</span>.0.0.1:8081:8080 <span class="se">\</span>
+  -e <span class="nv">JUMPSERVER_SERVER</span><span class="o">=</span>http://&lt;Jumpserver_url&gt; <span class="se">\</span>
+  -e <span class="nv">BOOTSTRAP_TOKEN</span><span class="o">=</span>&lt;Jumpserver_BOOTSTRAP_TOKEN&gt; <span class="se">\</span>
+  -e <span class="nv">GUACAMOLE_LOG_LEVEL</span><span class="o">=</span>ERROR <span class="se">\</span>
+  jumpserver/jms_guacamole:&lt;Tag&gt;
+&lt;Jumpserver_url&gt; 为 jumpserver 的 url 地址, &lt;Jumpserver_BOOTSTRAP_TOKEN&gt; 需要从 jumpserver/config.yml 里面获取, 保证一致, &lt;Tag&gt; 是版本
+</code></pre></div>
+
+</div>
+<div class="admonition tip">
+<p class="admonition-title">例:</p>
+<div class="highlight"><pre><span></span><code>docker run --name jms_guacamole -d <span class="se">\</span>
+  -p <span class="m">127</span>.0.0.1:8081:8080 <span class="se">\</span>
+  -e <span class="nv">JUMPSERVER_SERVER</span><span class="o">=</span>http://192.168.244.144:8080 <span class="se">\</span>
+  -e <span class="nv">BOOTSTRAP_TOKEN</span><span class="o">=</span>abcdefg1234 <span class="se">\</span>
+  -e <span class="nv">GUACAMOLE_LOG_LEVEL</span><span class="o">=</span>ERROR <span class="se">\</span>
+  jumpserver/jms_guacamole:1.5.9
+</code></pre></div>
+
+</div>
+<h3 id="10-luna">10. 下载 luna 组件<a class="headerlink" href="#10-luna" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt
+</code></pre></div>
+
+<div class="admonition tip">
+<p class="admonition-title">访问 <a href="https://github.com/jumpserver/luna/releases">此处</a> 获取</p>
+<details class="question"><summary>网络有问题访问 <a href="http://demo.jumpserver.org/download/luna/">此处</a> 快速下载</summary><div class="highlight"><pre><span></span><code>wget http://demo.jumpserver.org/download/luna/1.5.9/luna.tar.gz
+</code></pre></div>
+
+</details>
+<div class="highlight"><pre><span></span><code>wget https://github.com/jumpserver/luna/releases/download/1.5.9/luna.tar.gz
+</code></pre></div>
+
+</div>
+<div class="highlight"><pre><span></span><code>tar -xf luna.tar.gz
+chown -R nginx:nginx luna
+</code></pre></div>
+
+<h3 id="11-nginx">11. 配置 nginx 整合各组件<a class="headerlink" href="#11-nginx" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">参考 <a href="http://nginx.org/en/linux_packages.html">官方文档</a> 安装最新的稳定版 nginx</p>
+</div>
+<p><div class="highlight"><pre><span></span><code><span class="nb">echo</span> &gt; /etc/nginx/conf.d/default.conf
+vi /etc/nginx/conf.d/jumpserver.conf
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>server {
+    listen <span class="m">80</span>;
+
+    client_max_body_size <span class="m">100</span>m;  # 录像及文件上传大小限制
+
+    location <span class="sr">/luna/</span> {
+        try_files $uri <span class="sr">/ /</span>index.html;
+        alias <span class="sr">/opt/</span>luna/;  # luna 路径<span class="p">,</span> 如果修改安装目录<span class="p">,</span> 此处需要修改
+    }
+
+    location <span class="sr">/media/</span> {
+        add_header Content<span class="p">-</span>Encoding gzip;
+        root <span class="sr">/opt/</span>jumpserver<span class="sr">/data/</span>;  # 录像位置<span class="p">,</span> 如果修改安装目录<span class="p">,</span> 此处需要修改
+    }
+
+    location <span class="sr">/static/</span> {
+        root <span class="sr">/opt/</span>jumpserver<span class="sr">/data/</span>;  # 静态资源<span class="p">,</span> 如果修改安装目录<span class="p">,</span> 此处需要修改
+    }
+
+    location <span class="sr">/koko/</span> {
+        proxy_pass       http:<span class="sr">//</span>localhost:<span class="m">5000</span>;
+        proxy_buffering off;
+        proxy_http_version <span class="m">1</span>.<span class="m">1</span>;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection <span class="s2">&quot;upgrade&quot;</span>;
+        proxy_set_header X<span class="p">-</span>Real<span class="p">-</span>IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X<span class="p">-</span>Forwarded<span class="p">-</span>For $proxy_add_x_forwarded_for;
+        access_log off;
+    }
+
+    location <span class="sr">/guacamole/</span> {
+        proxy_pass       http:<span class="sr">//</span>localhost:<span class="m">8081</span>/;
+        proxy_buffering off;
+        proxy_http_version <span class="m">1</span>.<span class="m">1</span>;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $http_connection;
+        proxy_set_header X<span class="p">-</span>Real<span class="p">-</span>IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X<span class="p">-</span>Forwarded<span class="p">-</span>For $proxy_add_x_forwarded_for;
+        access_log off;
+    }
+
+    location <span class="sr">/ws/</span> {
+        proxy_set_header X<span class="p">-</span>Real<span class="p">-</span>IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X<span class="p">-</span>Forwarded<span class="p">-</span>For $proxy_add_x_forwarded_for;
+        proxy_pass http:<span class="sr">//</span>localhost:<span class="m">8070</span>;
+        proxy_http_version <span class="m">1</span>.<span class="m">1</span>;
+        proxy_buffering off;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection <span class="s2">&quot;upgrade&quot;</span>;
+    }
+
+    location / {
+        proxy_pass http:<span class="sr">//</span>localhost:<span class="m">8080</span>;
+        proxy_set_header X<span class="p">-</span>Real<span class="p">-</span>IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X<span class="p">-</span>Forwarded<span class="p">-</span>For $proxy_add_x_forwarded_for;
+    }
+}
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>nginx -t
+nginx -s reload
+</code></pre></div>
+
+<h3 id="12-jumpserver">12. 开始使用 JumpServer<a class="headerlink" href="#12-jumpserver" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">检查应用是否已经正常运行</p>
+<p>服务全部启动后, 访问 jumpserver 服务器 nginx 代理的 80 端口, 不要通过8080端口访问
+默认账号: admin 密码: admin  </p>
+</div>
+<p>后续的使用请参考 <a href="../install_security/">安全建议</a> <a href="../../admin-guide/quick_start/">快速入门</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../.." title="总体介绍" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                总体介绍
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../setup_by_fast/" title="极速部署" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                极速部署
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2014-2020 <a href="https://www.fit2cloud.com">杭州飞致云信息科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15023818号</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

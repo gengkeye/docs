@@ -1,0 +1,1735 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="JumpServer Docs">
+      
+      
+        <link rel="canonical" href="https://jumpserver.org/admin-guide/quick_start/">
+      
+      
+        <meta name="author" content="wojiushixiaobai">
+      
+      <link rel="shortcut icon" href="../../img/facio.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+    
+    
+      
+        <title>快速入门 - JumpServer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a2408e81.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-147297392-6","docs.jumpserver.org"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://jumpserver.org" title="JumpServer Docs" class="md-header-nav__button md-logo" aria-label="JumpServer Docs">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            JumpServer Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              快速入门
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/jumpserver/jumpserver" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github Star
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://jumpserver.org" title="JumpServer Docs" class="md-nav__button md-logo" aria-label="JumpServer Docs">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    JumpServer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/jumpserver/jumpserver" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github Star
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="总体介绍" class="md-nav__link">
+      总体介绍
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      安装配置
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="安装配置" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        安装配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/step_by_step/" title="安装文档" class="md-nav__link">
+      安装文档
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/setup_by_fast/" title="极速部署" class="md-nav__link">
+      极速部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/docker_install/" title="容器部署" class="md-nav__link">
+      容器部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      分布式部署
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="分布式部署" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        分布式部署
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/setup_by_prod/" title="环境说明" class="md-nav__link">
+      环境说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/prod/distributed_01/" title="NFS 部署" class="md-nav__link">
+      NFS 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/prod/distributed_02/" title="Tengine 部署" class="md-nav__link">
+      Tengine 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/prod/distributed_03/" title="Mariadb 部署" class="md-nav__link">
+      Mariadb 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/prod/distributed_04/" title="Redis 部署" class="md-nav__link">
+      Redis 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/prod/distributed_05/" title="Core 部署" class="md-nav__link">
+      Core 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/prod/distributed_06/" title="Koko 部署" class="md-nav__link">
+      Koko 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/prod/distributed_07/" title="Guacamole 部署" class="md-nav__link">
+      Guacamole 部署
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/ansible_install/" title="Ansible 部署" class="md-nav__link">
+      Ansible 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/install_security/" title="安全建议" class="md-nav__link">
+      安全建议
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/uninstall/" title="卸载文档" class="md-nav__link">
+      卸载文档
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      管理文档
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="管理文档" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        管理文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        快速入门
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="快速入门" class="md-nav__link md-nav__link--active">
+      快速入门
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一、系统设置
+  </a>
+  
+    <nav class="md-nav" aria-label="一、系统设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 基本设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 邮件设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    二、资产管理
+  </a>
+  
+    <nav class="md-nav" aria-label="二、资产管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 编辑资产树
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 创建管理用户
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 创建资产
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#231" class="md-nav__link">
+    2.3.1 创建数据库应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4 创建系统用户
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    三、创建授权规则
+  </a>
+  
+    <nav class="md-nav" aria-label="三、创建授权规则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 为用户分配资产
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.1.1 为用户分配数据库应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    四、用户登录
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      更新升级
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="更新升级" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        更新升级
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade/1.0.0-1.4.3/" title="1.0.0-1.4.3 升级到 1.4.4" class="md-nav__link">
+      1.0.0-1.4.3 升级到 1.4.4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade/1.4.4/" title="1.4.4 升级到 1.4.5" class="md-nav__link">
+      1.4.4 升级到 1.4.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade/1.4.5-1.4.10/" title="1.4.5-1.4.10 升级到 最新" class="md-nav__link">
+      1.4.5-1.4.10 升级到 最新
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade/1.5.0/" title="1.5.0 及之后版本升级到 最新" class="md-nav__link">
+      1.5.0 及之后版本升级到 最新
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade/other/" title="其他部署方式升级说明" class="md-nav__link">
+      其他部署方式升级说明
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../migration/" title="迁移文档" class="md-nav__link">
+      迁移文档
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      资产要求
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="资产要求" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        资产要求
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assets/telnet/" title="Tetnet" class="md-nav__link">
+      Tetnet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assets/linux_ssh/" title="Linux SSH" class="md-nav__link">
+      Linux SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assets/linux_vnc/" title="Linux VNC" class="md-nav__link">
+      Linux VNC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assets/windows_ssh/" title="Windows SSH" class="md-nav__link">
+      Windows SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assets/windows_vnc/" title="Windows VNC" class="md-nav__link">
+      Windows VNC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assets/windows_rdp/" title="Windows RDP" class="md-nav__link">
+      Windows RDP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      身份认证
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="身份认证" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        身份认证
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../authentication/cas/" title="CAS 认证" class="md-nav__link">
+      CAS 认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../authentication/mfa/" title="MFA 认证" class="md-nav__link">
+      MFA 认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../authentication/ldap/" title="LDAP 认证" class="md-nav__link">
+      LDAP 认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../authentication/openid/" title="OpenID 认证" class="md-nav__link">
+      OpenID 认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../authentication/radius/" title="Radius 认证" class="md-nav__link">
+      Radius 认证
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../organization/" title="组织管理" class="md-nav__link">
+      组织管理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../proxy/" title="反向代理" class="md-nav__link">
+      反向代理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      开发文档
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="开发文档" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        开发文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/rest_api/" title="API文档" class="md-nav__link">
+      API文档
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../issues/list/" title="问题清单" class="md-nav__link">
+      问题清单
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      用户文档
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="用户文档" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        用户文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/assets/user-asset/" title="我的资产" class="md-nav__link">
+      我的资产
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      我的应用
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="我的应用" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        我的应用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/applications/user-database-app/" title="数据库应用" class="md-nav__link">
+      数据库应用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/ops/command-executions/create/" title="命令执行" class="md-nav__link">
+      命令执行
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/users/profile/" title="个人信息" class="md-nav__link">
+      个人信息
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/terminal/web-terminal/" title="Web终端" class="md-nav__link">
+      Web终端
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/terminal/web-sftp/" title="文件管理" class="md-nav__link">
+      文件管理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      帮助文档
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="帮助文档" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        帮助文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/core/" title="Core 常见问题" class="md-nav__link">
+      Core 常见问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/luna/" title="Luna 常见问题" class="md-nav__link">
+      Luna 常见问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/koko/" title="koko 常见问题" class="md-nav__link">
+      koko 常见问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/guacamole/" title="Guacamole 问题" class="md-nav__link">
+      Guacamole 问题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      关于
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="关于" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        关于
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/contributor/" title="贡献列表" class="md-nav__link">
+      贡献列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/change_log/" title="更新说明" class="md-nav__link">
+      更新说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/contact/" title="联系方式" class="md-nav__link">
+      联系方式
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一、系统设置
+  </a>
+  
+    <nav class="md-nav" aria-label="一、系统设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 基本设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 邮件设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    二、资产管理
+  </a>
+  
+    <nav class="md-nav" aria-label="二、资产管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 编辑资产树
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 创建管理用户
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 创建资产
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#231" class="md-nav__link">
+    2.3.1 创建数据库应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4 创建系统用户
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    三、创建授权规则
+  </a>
+  
+    <nav class="md-nav" aria-label="三、创建授权规则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 为用户分配资产
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.1.1 为用户分配数据库应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    四、用户登录
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="_1">快速入门<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">以下操作均在 Web 页面完成，请使用 admin 用户登陆，默认密码 admin</p>
+</div>
+<h2 id="_2">一、系统设置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 基本设置<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>当前站点URL</code>    不设置的话，邮件收到的地址为 <a href="http://localhost">http://localhost</a> 开头<br />
+<code>Email主题前缀</code>  邮件的标题，比如 <code>[JMS]</code> 收到的邮件会是 <code>[jms]创建用户成功</code> 这样的</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title"><code>用户向导URL</code>    用户首次登陆可以看到此 <code>超链接</code>，可以忽略不设置</p>
+</div>
+<h3 id="12">1.2 邮件设置<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">必须设置才能使用与邮件相关的功能</p>
+<details class="danger"><summary>不可以同时勾选 <code>使用SSL</code> 和 <code>使用TLS</code></summary><p><code>使用SSL</code>  如果端口使用 <code>465</code>，必须勾选此项<br />
+<code>使用TLS</code>  如果端口使用 <code>587</code>，必须勾选此项</p>
+</details>
+<p><code>SMTP主机</code> 输入你或者你服务商提供的 smtp 服务器, 格式：<code>smtp.qq.com</code><br />
+<code>SMTP端口</code> 通常是 <code>25</code>，推荐使用更安全的 <code>465</code> 或者 <code>587</code><br />
+<code>SMTP账号</code> 通常是 <code>user@domain.com</code><br />
+<code>SMTP密码</code> 输入对应账户的密码，注意：每次测试都需要重新输入密码 <br />
+<code>发送账号</code>  与 <code>SMTP账户</code> 保持一致</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><code>测试收件人</code> 测试连接时一定要输入</p>
+</div>
+<h2 id="_3">二、资产管理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">准备两个测试资产和一个数据库来验证功能</p>
+</div>
+<div class="highlight"><pre><span></span><code>+--------------+-----------------+------------+------------+---------------+---------------+
+|      IP      |    Host name    |    Port    |   System   |  Admin User   |    Password   |
++==============+=================+============+============+===============+===============+
+| 172.16.80.11 |    test_ssh01   |     22     |  Centos 7  |      root     |  Test2020.L   |
++--------------+-----------------+------------+------------+---------------+---------------+
+| 172.16.80.21 |    test_rdp01   |    3389    | Windows 10 | administrator |  Test2020.W   |
++--------------+-----------------+------------+------------+---------------+---------------+
+| 172.16.80.31 |   test_mysql01  |    3306    |   Mysql 5  |      root     |  Test2020.M   |
++--------------+-----------------+------------+------------+---------------+---------------+
+</code></pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">Windows 资产先进行 <a href="../assets/windows_ssh/">Windows SSH 设置</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Mysql Server 需要授权 core 和 koko 的远程访问的权限</p>
+<p><div class="highlight"><pre><span></span><code>mysql -uroot
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">grant</span> <span class="k">all</span> <span class="k">on</span> <span class="o">*</span><span class="p">.</span><span class="o">*</span> <span class="k">to</span> <span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span> <span class="n">identified</span> <span class="k">by</span> <span class="s1">&#39;Test2020.M&#39;</span><span class="p">;</span>
+<span class="k">flush</span> <span class="n">privileges</span><span class="p">;</span>
+</code></pre></div></p>
+</div>
+<h3 id="21">2.1 编辑资产树<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">根节点 Default 不能重名, 右击节点可以添加、删除和重命名节点, 以及进行资产相关的操作</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">说明</p>
+<p>点击页面左侧的 <code>资产管理</code> - <code>资产列表</code><br />
+先在根节点 <code>Default</code> 右键新建 <code>SSH Server</code> 和 <code>RDP Server</code> 两个节点</p>
+</div>
+<h3 id="22">2.2 创建管理用户<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">点击页面左侧的 <code>资产管理</code> - <code>新建管理用户</code> 创建两个管理用户, 管理用户的内容就是上面表单的 <code>Admin User</code> 和 <code>Password</code></p>
+<div class="admonition warning">
+<p class="admonition-title">名称不能重名, 密码或者密钥二选一即可, 一些资产不允许通过 密码 认证可以改用 私钥 认证</p>
+</div>
+<p><code>名称</code> 172.16.80.11_root<br />
+<code>用户名</code> root<br />
+<code>密码</code> Test2020.L<br />
+点击 <code>保存</code></p>
+<p>再创建 Windows 资产的 <code>管理用户</code><br />
+<code>名称</code> 172.16.80.21_administrator<br />
+<code>用户名</code> administrator<br />
+<code>密码</code> Test2020.W<br />
+点击 <code>保存</code></p>
+</div>
+<h3 id="23">2.3 创建资产<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">点击页面左侧的 <code>资产管理</code> - <code>资产列表</code> - <code>创建资产</code> 把两个资产导入</p>
+<div class="admonition warning">
+<p class="admonition-title">主机名不能重名</p>
+</div>
+<p><code>主机名</code> test_ssh01<br />
+<code>IP</code> 172.16.80.11<br />
+<code>系统平台</code> Linux<br />
+<code>协议组</code> ssh 22<br />
+<code>管理用户</code> 172.16.80.11_root<br />
+<code>节点</code> Default / SSH Server<br />
+点击 <code>保存</code></p>
+<p>再创建 Windows 资产, 注意协议组我们需要选择 <code>ssh</code> 和 <code>rdp</code>, 否则无法获取 Windows 资产的状态及硬件信息<br />
+<code>主机名</code> 172.16.80.21_administrator<br />
+<code>IP</code> 172.16.80.21<br />
+<code>系统平台</code> Windows2016<br />
+<code>协议组</code> rdp 3389 / ssh 22<br />
+<code>管理用户</code> test_test_rdp01_administrator<br />
+<code>节点</code> Default / RDP Server<br />
+点击 <code>保存</code></p>
+</div>
+<details class="tip"><summary>测试资产连接提示</summary><ol>
+<li>资产创建信息填写好保存之后隔几秒钟时间刷新一下网页, <code>ssh</code> 协议资产的可连接图标会显示 <code>绿色</code>, 且 <code>硬件信息</code> 会显示出来  </li>
+<li>如果 <code>可连接</code> 的图标是 <code>黄色</code> 或者 <code>红色</code> , 可以点击 <code>资产</code> 的 <code>名称</code>，在右侧 <code>快速修改</code> - <code>测试可连接性</code> 点击 <code>测试</code> 按钮, 根据错误提示处理  </li>
+<li>被连接 <code>Linux</code> 资产需要 <code>python</code> 组件, 且版本大于等于 <code>2.6</code>, <code>Ubuntu</code> 等资产默认不允许 <code>root</code> 用户远程 <code>ssh</code> 登录, 请自行处理, <code>Windows</code> 资产需要手动安装 <code>OpenSSH Server</code></li>
+<li>如果资产不能正常连接, 请检查 管理用户 的 <code>用户名</code> 和 <code>密码</code> 是否正确以及该 <code>管理用户</code> 是否能使用 <code>SSH</code> 从 <code>JumpServer</code> 主机正确登录到资产主机上</li>
+</ol>
+</details>
+<h3 id="231">2.3.1 创建数据库应用<a class="headerlink" href="#231" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">击页面左侧的 <code>应用管理</code> - <code>数据库应用</code> - <code>创建数据库应用</code> 创建 mysql 数据库</p>
+<p><code>名称</code> test_mysql01<br />
+<code>类型</code> MySQL<br />
+<code>主机</code> 172.16.80.31<br />
+<code>端口</code> 3306  </p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">数据库 选项可以留空, 如果是某些特定用户, 只允许访问指定的数据库, 这里指定数据库名称即可</p>
+</div>
+<h3 id="24">2.4 创建系统用户<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>+--------------+------------+---------------+---------------+--------------+--------------+-------------+
+|      IP      |   System   |  System User  |    Password   |     Group    |     Sudo     |  Sftp Root  |
++==============+============+===============+===============+==============+==============+=============+
+| 172.16.80.11 |  Centos 7  |   testssh01   |  random pass  |              |      ALL     |      /      |
++--------------+------------+---------------+---------------+--------------+--------------+-------------+
+| 172.16.80.21 | Windows 10 |   testrdp01   |  random pass  |     Users    |              |             |
++--------------+------------+---------------+---------------+--------------+--------------+-------------+
+| 172.16.80.23 |   Mysql 5  |      root     |  Test2020.M   |              |              |             |
++--------------+------------+---------------+---------------+--------------+--------------+-------------+
+</code></pre></div>
+
+<details class="tip"><summary>系统用户提示</summary><p>在理解 <code>系统用户</code> 之前, 你首先得知道系统用户是干嘛用的. 在 <code>Jumpserver</code> 中, 需要对资产不同的用途创建不同的 <code>系统用户</code><br />
+比如一个 <code>资产</code>, 开发要用、测试要用、可能还要其他的部门也要使用, 偷懒的人可能会统一给 <code>root</code> 用户, 但是这样并不安全<br />
+系统用户就是为了解决这个问题, 我们针对不同的用途创建不同的 <code>系统用户</code>, <code>Linux</code> 通过 <code>Sudo</code> 来控制用户的权限, <code>Windows</code> 通过组来控制用户权限</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">点击页面左侧的 <code>资产管理</code> - <code>系统用户</code> - <code>创建系统用户</code> 创建两个系统用户</p>
+<p><code>名称</code> test_ssh01_测试系统用户<br />
+<code>登录模式</code> 自动登陆<br />
+<code>用户名</code> testssh01<br />
+<code>协议</code> ssh<br />
+<code>Sudo</code> ALL
+<code>SFTP根路径</code> /<br />
+其他选项默认, 点击 <code>保存</code></p>
+<p>再创建 Windows 系统用户<br />
+<code>名称</code> test_rdp01_测试系统用户<br />
+<code>登录模式</code> 自动登陆<br />
+<code>用户名</code> testrdp01<br />
+<code>协议</code> rdp<br />
+其他选项默认, 点击 <code>保存</code></p>
+<p>创建 MySQL 系统用户<br />
+<code>名称</code> test_mysql01_测试系统用户<br />
+<code>登录模式</code> 自动登陆<br />
+<code>用户名</code> root<br />
+<code>协议</code> mysql<br />
+<code>密码</code> Test2020.M<br />
+其他选项默认, 点击 <code>保存</code></p>
+</div>
+<h2 id="_4">三、创建授权规则<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 为用户分配资产<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>+--------------+------------+---------------+-----------------+
+|      IP      |   System   |  System User  | Jumpserver User |
++==============+============+===============+=================+
+| 172.16.80.11 |  Centos 7  |   testssh01   |      admin      |
++--------------+------------+---------------+-----------------+
+| 172.16.80.21 | Windows 10 |   testrdp01   |      admin      |
++--------------+------------+---------------+-----------------+
+| 172.16.80.31 |  Mysql 5   |      root     |      admin      |
++--------------+------------+---------------+-----------------+
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">点击页面左侧的 <code>授权管理</code> - <code>资产授权</code> - <code>创建授权规则</code> 创建两个授权</p>
+<p><code>名称</code> test_ssh01_测试授权<br />
+<code>用户</code> Administrator(admin)<br />
+<code>资产</code> test_ssh01(172.16.80.11)<br />
+<code>系统用户</code> test_ssh01_测试系统用户(testssh01)<br />
+<code>有效期</code> 时间自行定义, 用户只能在有效期时间内连接资产<br />
+修改完成后点击 <code>保存</code></p>
+<p>再创建 Windows 授权<br />
+<code>名称</code> test_rdp01_测试授权<br />
+<code>用户</code> Administrator(admin)<br />
+<code>资产</code> test_rdp01(172.16.80.21)<br />
+<code>系统用户</code> test_rdp01_测试系统用户(testrdp01)<br />
+修改完成后点击 <code>保存</code></p>
+</div>
+<details class="tip"><summary>资产授权提示</summary><p><code>名称</code>, 授权的名称, 不能重复<br />
+<code>用户</code> 和 <code>用户组</code> 二选一, 不推荐即选择 <code>用户</code> 又选择 <code>用户组</code><br />
+<code>资产</code> 和 <code>节点</code> 二选一, 选择 <code>节点</code> 会包含 <code>节点</code> 下面的所有 <code>资产</code><br />
+<code>系统用户</code>, 及所选的 <code>用户</code> 或 <code>用户组</code> 下的 <code>用户</code> 能通过该 <code>系统用户</code> 使用所选 <code>节点</code> 或者 <code>节点</code> 下的 <code>资产</code><br />
+<code>用户(组)</code>, <code>资产(节点)</code>, <code>系统用户</code> 是一对一的关系, 所以当拥有 <code>Linux</code>、<code>Windows</code> 不同类型资产时, 应该分别给 <code>Linux</code> 资产和 <code>Windows</code> 资产创建 <code>授权规则</code><br />
+一般情况下, <code>资产</code>授权给<code>用户</code>, <code>节点</code>授权给<code>用户组</code>, 一个<code>授权</code>只能选择一个<code>系统用户</code></p>
+</details>
+<h3 id="311">3.1.1 为用户分配数据库应用<a class="headerlink" href="#311" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">点击页面左侧的 <code>授权管理</code> - <code>数据库应用</code> - <code>创建授权规则</code>  创建数据库授权</p>
+<p><code>名称</code> test_mysql01_测试授权<br />
+<code>用户</code> Administrator(admin)<br />
+<code>数据库应用</code> test_mysql01<br />
+<code>系统用户</code> test_mysql01_测试系统用户(root)<br />
+修改完成后点击 <code>保存</code></p>
+</div>
+<h2 id="_5">四、用户登录<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">登录 JumpServer</p>
+<p>点击页面左侧的 <code>会话管理</code> - <code>Web终端</code>
+用户只能看到自己被管理员授权了的 <code>资产</code> , 如果登录后无资产, 请联系管理员进行确认</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">连接资产</p>
+<p>在我的资产点击资产右边的  <code>连接</code>  快速连接资产<br />
+也可以点击左侧栏的  <code>Web终端</code>
+点击  <code>资产</code>  名字, 就连上资产了<br />
+如果显示连接 <code>超时</code>, 请参考 <code>FAQ</code> 文档进行处理</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">断开资产</p>
+<p>点击页面顶部的 <code>Server</code> 按钮会弹出选个选项, 第一个断开所选的连接, 第二个断开所有连接<br />
+也可以直接点资产小窗口的 X , <code>SSH</code> 会话也可以输入 <code>exit</code> 来退出<br />
+直接关闭页面也可以, 但是不推荐</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">文件管理</p>
+<p>点击 <code>文件管理</code><br />
+先在左边选择<code>资产</code>, 目前只支持自动登录的 <code>SSH</code> 协议 <code>资产</code><br />
+也可以使用 <code>sftp</code> 方式进行 <code>文件管理</code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">以上就是 JumpServer 的简易入门了, JumpServer 还有很多功能等待您去发现</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../install/uninstall/" title="卸载文档" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                卸载文档
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../upgrade/1.0.0-1.4.3/" title="1.0.0-1.4.3 升级到 1.4.4" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                1.0.0-1.4.3 升级到 1.4.4
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2014-2020 <a href="https://www.fit2cloud.com">杭州飞致云信息科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15023818号</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
